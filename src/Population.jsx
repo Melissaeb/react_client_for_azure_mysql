@@ -1,13 +1,11 @@
+import { useParams } from "react-router-dom";
 import PropTypes from "prop-types";
 
-export function Population({ continent = "" }) {
+export function Population() {
+  const { continent } = useParams();
   return (
     <div>
-      <h2>Population of {continent}</h2>
+      <h2>Population of {parcontinent}</h2>
     </div>
   );
 }
-
-Population.propTypes = {
-  continent: PropTypes.string.isRequired,
-};

@@ -27,8 +27,10 @@ function ErrorElement({ error }) {
 ErrorElement.propTypes = {
   error: PropTypes.object.isRequired,
 };
+
 function App() {
-  let { countryname, continent } = useParams();
+  // let { countryname, continent } = useParams();
+  // console.log(countryname);
   let router = createBrowserRouter([
     {
       path: "/",
@@ -49,11 +51,11 @@ function App() {
         // Uncomment the following lines to add the routes for the Population and Country components
         {
           path: "population/:continent",
-          element: <Population continent={continent} />,
+          element: <Population />,
         },
         {
           path: "country/:countryname",
-          element: <Country countryname={countryname} />,
+          element: <Country />,
         },
       ],
     },
