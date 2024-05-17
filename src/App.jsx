@@ -28,7 +28,7 @@ ErrorElement.propTypes = {
   error: PropTypes.object.isRequired,
 };
 function App() {
-  // let { countryname, continent } = useParams();
+  let { countryname, continent } = useParams();
   let router = createBrowserRouter([
     {
       path: "/",
