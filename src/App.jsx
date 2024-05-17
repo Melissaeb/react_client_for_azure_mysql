@@ -8,8 +8,8 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { Layout } from "./Layout";
 import { Home } from "./Home";
 import { Countries } from "./Countries";
-// import { Population } from "./Population";
-// import { Country } from "./Country";
+import { Population } from "./Population";
+import { Country } from "./Country";
 
 const queryClient = new QueryClient();
 // ErrorElement component
@@ -47,14 +47,14 @@ function App() {
           element: <Countries />,
         },
         // Uncomment the following lines to add the routes for the Population and Country components
-        // {
-        //   path: "population/:continent",
-        //   element: <Population continent={continent} />,
-        // },
-        // {
-        //   path: "country/:countryname",
-        //   element: <Country countryname={countryname} />,
-        // },
+        {
+          path: "population/:continent",
+          element: <Population continent={continent} />,
+        },
+        {
+          path: "country/:countryname",
+          element: <Country countryname={countryname} />,
+        },
       ],
     },
   ]);
